@@ -1,0 +1,12 @@
+@import 'variables';
+
+@import 'icons';
+@import 'grid';
+@import 'header';
+@import 'main';
+
+@media only screen and (max-width: 1400px) {
+	body {
+		font-size: 12px;
+	}
+}

@@ -1,0 +1,21 @@
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
+
+.grid__line {
+  position: relative;
+  width: 10.4%; }
+  .grid__line:first-child {
+    width: 13.6%; }
+  .grid__line:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100vh;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5); }
