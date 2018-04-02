@@ -110,7 +110,7 @@ function Slider(sSelector) {
 
 			active.removeClass('slide_prev');
 
-		}, 1000);
+		}, 2000);
 		pag.removeClass(s.pagActive);
 		s.pagsItem.eq(index).addClass(s.pagActive);
 	}
