@@ -229,9 +229,9 @@ header {
   height: 100%;
   width: 0;
   overflow: hidden;
-  -webkit-transition: 1s width ease;
-  -o-transition: 1s width ease;
-  transition: 1s width ease; }
+  -webkit-transition: width 1.5s ease-in-out;
+  -o-transition: width 1.5s ease-in-out;
+  transition: width 1.5s ease-in-out; }
   .slide__part:before {
     content: "";
     display: block;
@@ -291,7 +291,7 @@ header {
   background-image: url(../images/header2.jpg); }
 
 .slide_3 .slide__part:before {
-  background-image: url(../images/header3.jpg); }
+  background-image: url(../images/slide_slg2.jpg); }
 
 .slideTxt {
   position: absolute;
@@ -303,6 +303,14 @@ header {
   transform: translateY(-50%);
   z-index: 150; }
 
+.slideTxt__wrap {
+  position: relative;
+  overflow: hidden; }
+
+.slideTxt__wrap_head {
+  width: 88%;
+  height: 12em; }
+
 .slideTxt__head {
   font-family: 'Bodoni', serif;
   font-size: 5.7em;
@@ -310,17 +318,19 @@ header {
   font-weight: 700;
   line-height: 0.8em;
   color: #fff;
-  width: 88%;
-  position: relative;
-  -webkit-transform: translateY(-200%);
-  -ms-transform: translateY(-200%);
-  transform: translateY(-200%);
-  opacity: 0;
-  -webkit-transition: 0.4s opacity 1.4s, 0.8s -webkit-transform 1s;
-  transition: 0.4s opacity 1.4s, 0.8s -webkit-transform 1s;
-  -o-transition: 0.8s transform 1s, 0.4s opacity 1.4s;
-  transition: 0.8s transform 1s, 0.4s opacity 1.4s;
-  transition: 0.8s transform 1s, 0.4s opacity 1.4s, 0.8s -webkit-transform 1s; }
+  -webkit-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99);
+  transition: -webkit-transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99);
+  -o-transition: transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99);
+  transition: transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99);
+  transition: transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99), -webkit-transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99); }
+
+.slideTxt__wrap_txt {
+  width: 57%;
+  height: 6em;
+  margin-top: 2.1em; }
 
 .slideTxt__txt {
   font-family: 'Bodoni', serif;
@@ -329,18 +339,14 @@ header {
   letter-spacing: 0.01em;
   line-height: 1em;
   color: #fff;
-  width: 57%;
-  margin-top: 1em;
-  position: relative;
-  opacity: 0;
-  -webkit-transform: translateY(-200%);
-  -ms-transform: translateY(-200%);
-  transform: translateY(-200%);
-  -webkit-transition: 0.4s opacity, 0.8s -webkit-transform;
-  transition: 0.4s opacity, 0.8s -webkit-transform;
-  -o-transition: 0.8s transform, 0.4s opacity;
-  transition: 0.8s transform, 0.4s opacity;
-  transition: 0.8s transform, 0.4s opacity, 0.8s -webkit-transform; }
+  -webkit-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99);
+  transition: -webkit-transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99);
+  -o-transition: transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99);
+  transition: transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99);
+  transition: transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99), -webkit-transform 1.2s cubic-bezier(0.78, 0.01, 0.13, 0.99); }
 
 .slide_active .slide__part,
 .slide_prev .slide__part {
@@ -360,23 +366,21 @@ header {
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   transform: translateY(0%);
-  opacity: 1;
-  -webkit-transition-delay: 1s, 1.4s;
-  -o-transition-delay: 1s, 1.4s;
-  transition-delay: 1s, 1.4s; }
+  -webkit-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s; }
 
 .slide_prev .slide__part {
   z-index: 1; }
 
 .slide_prev .slideTxt__head,
 .slide_prev .slideTxt__txt {
-  -webkit-transform: translateY(-200%);
-  -ms-transform: translateY(-200%);
-  transform: translateY(-200%);
-  opacity: 0;
-  -webkit-transition-delay: 0s, 0s;
-  -o-transition-delay: 0s, 0s;
-  transition-delay: 0s, 0s; }
+  -webkit-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  transform: translateY(200%);
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s; }
 
 .sliderPag {
   display: -webkit-box;
@@ -512,6 +516,6 @@ header {
   -ms-transform: translateY(0%);
   transform: translateY(0%); }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1650px) {
   body {
     font-size: 12px; } }
