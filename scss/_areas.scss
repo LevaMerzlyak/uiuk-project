@@ -93,13 +93,13 @@
 .page_current {
 	.head_areas {
 		transform: translateY(0%);
-		transition-delay: 3.8s;
+		transition-delay: 3.3s;
 	}
 	.areasList {
 		&:before,
 		&:after {
 			height: 100%;
-			transition-delay: 3.8s;
+			transition-delay: 3.3s;
 		}
 	}	
 	.areasList__item {
@@ -108,11 +108,11 @@
 				&:before {
 					border: 1px solid $wht;
 					background-color: $wht;
-					transition-delay: ($i * 0.2s) + 3.8s;
+					transition-delay: ($i * 0.2s) + 3.3s;
 				}
 				.areasList__txt {
 					transform: translateY(0%);
-					transition-delay: ($i * 0.2s) + 3.8s;
+					transition-delay: ($i * 0.2s) + 3.3s;
 				}
 			}
 		}
@@ -121,11 +121,11 @@
 				&:before {
 					border: 1px solid $wht;
 					background-color: $wht;
-					transition-delay: ($i * 0.2s) + 3.8s;
+					transition-delay: ($i * 0.2s) + 3.3s;
 				}
 				.areasList__txt {
 					transform: translateY(0%);
-					transition-delay: ($i * 0.2s) + 3.8s;
+					transition-delay: ($i * 0.2s) + 3.3s;
 				}
 			}
 		}

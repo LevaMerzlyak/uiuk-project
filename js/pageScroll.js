@@ -13,7 +13,7 @@ function PageScroll(sSelector) {
 	p.current = 0;
 
 	p.scrollBlock = false;
-	p.scrollDelay = 3800;
+	p.scrollDelay = 3300;
 
 	p.scrollBtn = p.body.find('.scrollBtn');
 
@@ -60,14 +60,19 @@ function PageScroll(sSelector) {
 			setTimeout(function () {
 
 				p.scrollBtn.find('.icon').addClass('icon_down').removeClass('icon_up');
-				
+
 			}, p.scrollDelay);
 		}
-		/*if (p.current != 0) {
-			s.stopSlider();
+
+		if (p.current != 0) {
+
+			s1.stopSlider();
+
 		} else {
-			s.changeSlider();
-		}*/
+
+			s1.changeSlider();
+
+		}
 
 		setTimeout(function () {
 			

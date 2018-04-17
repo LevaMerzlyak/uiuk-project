@@ -29,7 +29,7 @@
 	.bg__part_contacts {
 		@for $i from 2 through 6 {
 			&:nth-child(#{$i}) {
-	    		transition: width 1.5s ease-in-out 0s, transform 1.5s ease-in-out 1.8s + ($i * 0.2s);
+	    		transition: width 1.5s ease-in-out 0s, transform 1s ease-in-out 1.8s + ($i * 0.2s);
 	    	}
 	  	}
 	}
@@ -39,7 +39,7 @@
 		transform: translateY(100%);
 		@for $i from 2 through 6 {
 			&:nth-child(#{$i}) {
-	    		transition: width 1.5s ease-in-out 0s, transform 1.5s ease-in-out 0.8s + ($i * 0.2s);
+	    		transition: width 1.5s ease-in-out 0s, transform 1s ease-in-out 0.8s + ($i * 0.2s);
 	    	}
 	  	}
 	}
@@ -48,7 +48,7 @@
 	.bg__part_contacts {
 		@for $i from 2 through 6 {
 			&:nth-child(#{$i}) {
-	    		transition: width 1.5s ease-in-out 0s, transform 1.5s ease-in-out 0.8s + ($i * 0.2s);
+	    		transition: width 1.5s ease-in-out 0s, transform 1s ease-in-out 0.8s + ($i * 0.2s);
 	    	}
 	  	}
 	}
@@ -97,7 +97,7 @@
 		.contactsTxt__subHead,
 		.contactsTxt__txt {
 			transform: translateY(0%);
-			transition-delay: 3.8s;
+			transition-delay: 3.3s;
 	}
 }
 .page_fromBottom,
