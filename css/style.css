@@ -209,7 +209,8 @@ header {
   width: 3em;
   text-align: center;
   position: relative;
-  margin-top: 2em; }
+  margin-top: 4em;
+  margin-bottom: 4em; }
   .lang__item:last-child:before {
     content: "";
     display: block;
@@ -742,15 +743,27 @@ header {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 1px;
-    height: 0;
+    height: 0; }
+  .sliderPag__item:after {
+    top: 2em;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
+  .sliderPag__item:before {
+    top: 2em;
     background-color: white;
     -webkit-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out; }
-  .sliderPag__item:after {
-    bottom: 0em; }
-  .sliderPag__item:before {
-    top: 0em; }
+  .sliderPag__item:last-child {
+    margin-bottom: 0; }
+    .sliderPag__item:last-child:before {
+      bottom: 2em;
+      top: auto; }
+    .sliderPag__item:last-child:after {
+      bottom: 2em;
+      top: auto; }
 
 .sliderPag__link {
   font-family: 'ProximaNova', sans-serif;
@@ -764,32 +777,18 @@ header {
   transition: 0.2s all; }
 
 .sliderPag__item_active {
-  margin-bottom: 1.75em;
-  margin-top: 1.75em; }
+  margin-bottom: 7em; }
   .sliderPag__item_active .sliderPag__link {
     font-weight: 700; }
-  .sliderPag__item_active:after, .sliderPag__item_active:before {
-    height: 1.75em; }
   .sliderPag__item_active:after {
-    bottom: -1.75em; }
+    height: 7em; }
   .sliderPag__item_active:before {
-    top: -1.75em; }
-  .sliderPag__item_active:first-child {
-    margin-top: 0;
-    margin-bottom: 3.5em; }
-    .sliderPag__item_active:first-child:before {
-      height: 0; }
-    .sliderPag__item_active:first-child:after {
-      height: 3.5em;
-      bottom: -3.5em; }
+    height: 7em;
+    -webkit-transition: all 5s linear;
+    -o-transition: all 5s linear;
+    transition: all 5s linear; }
   .sliderPag__item_active:last-child {
-    margin-top: 3.5em;
-    margin-bottom: 0; }
-    .sliderPag__item_active:last-child:before {
-      height: 3.5em;
-      top: -3.5em; }
-    .sliderPag__item_active:last-child:after {
-      height: 0; }
+    margin-top: 7em; }
 
 .sliderControls {
   position: absolute;

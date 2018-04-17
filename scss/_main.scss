@@ -123,14 +123,27 @@
 		transform: translateX(-50%);
 		width: 1px;
 		height: 0;
-		background-color: rgba(255,255,255,1);
-		transition: all 1s ease-in-out;
 	}	
 	&:after {
-		bottom: 0em;		
+		top: 2em;	
+		background-color: rgba(255,255,255,0.5);
+		transition: all 1s ease-in-out;
 	}
 	&:before {
-		top: 0em;	
+		top: 2em;
+		background-color: rgba(255,255,255,1);
+		transition: all 1s ease-in-out;
+	}
+	&:last-child {
+		margin-bottom: 0;
+		&:before {
+			bottom: 2em;
+			top: auto;
+		}
+		&:after {
+			bottom: 2em;
+			top: auto;
+		}
 	}
 }
 .sliderPag__link {
@@ -143,42 +156,19 @@
 	transition: 0.2s all; 
 }
 .sliderPag__item_active {
-	margin-bottom: 1.75em;
-	margin-top: 1.75em;
+	margin-bottom: 7em;
 	.sliderPag__link {
 		font-weight: 700;
 	}
-	&:after,
-	&:before {
-		height: 1.75em;
-	}
 	&:after {
-		bottom: -1.75em;		
+		height: 7em;
 	}
 	&:before {
-		top: -1.75em;	
-	}
-	&:first-child {
-		margin-top: 0;
-		margin-bottom: 3.5em;
-		&:before {
-			height: 0;
-		}
-		&:after {
-			height: 3.5em;
-			bottom: -3.5em;
-		}
+		height: 7em;
+		transition: all 5s linear;
 	}
 	&:last-child {
-		margin-top: 3.5em;
-		margin-bottom: 0;
-		&:before {
-			height: 3.5em;
-			top: -3.5em;
-		}
-		&:after {
-			height: 0;
-		}
+		margin-top: 7em;
 	}
 }
 .sliderControls {
