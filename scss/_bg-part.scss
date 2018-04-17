@@ -1,0 +1,71 @@
+.bg__part {
+	position: absolute;
+	height: 100%;
+	width: 0;
+	overflow: hidden;
+	transition: width 1.5s ease-in-out 0s, transform 1.5s ease-in-out 0s;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100vw;
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	@for $i from 1 through 9 {
+		&:nth-child(#{$i}) {
+    		right: 13.6% + ((8 - $i) * 10.4%);
+    		&:before {
+    			left: -30% - (($i - 1) * 100%);
+    		}
+    	}
+  	}
+  	&:nth-child(1) {
+  		&:before {
+  			left: 0;
+  		}
+  	}
+  	&:nth-child(9) {
+  		right: 0;
+  		&:before {
+  			left: -634%;
+  		}
+  	}
+}
+
+.page_current {
+	z-index: 2;
+	.bg__part {
+		transform: translateY(0%);
+		@for $i from 1 through 9 {
+			&:nth-child(#{$i}) {
+	    		transition: width 1.5s ease-in-out 0s, transform 1.5s ease-in-out 1s + ($i * 0.2s);
+	    	}
+	  	}
+	}
+}
+.page_fromBottom {
+	z-index: 1;
+	.bg__part {
+		transform: translateY(100%);
+		@for $i from 1 through 9 {
+			&:nth-child(#{$i}) {
+	    		transition: width 1.5s ease-in-out 0s, transform 1.5s ease-in-out ($i * 0.2s);
+	    	}
+	  	}
+	}
+}
+.page_toTop {
+	z-index: 1;
+	.bg__part {
+		transform: translateY(-100%);
+		@for $i from 1 through 9 {
+			&:nth-child(#{$i}) {
+	    		transition: width 1.5s ease-in-out 0s, transform 1.5s ease-in-out ($i * 0.2s);
+	    	}
+	  	}
+	}
+}

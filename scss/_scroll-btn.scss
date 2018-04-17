@@ -1,0 +1,31 @@
+.btn {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	border: 1px solid $border;
+	border-radius: 50%;
+	.icon {
+		display: block;
+		width: 30%;
+		height: 30%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+.scrollBtn {
+	position: absolute;
+	bottom: 2em;
+	left: 50%;
+	opacity: 0;
+	transform: translate(-50%, 200%);
+	z-index: 200;
+	transition: 1s transform 3s, 0.5s opacity 3.4s;
+}
+.loaded {
+	.scrollBtn {
+		opacity: 1;
+		transform: translate(-50%, 0%);
+	}
+}

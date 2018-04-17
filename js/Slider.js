@@ -15,6 +15,7 @@ function Slider(sSelector) {
 	s.pagActive = 'sliderPag__item_active';
 
 	s.shift = 0;
+	
 
 	s.pagInit = function () {
 
@@ -36,7 +37,9 @@ function Slider(sSelector) {
 
 		});
 		
-		s.pag.click(s.pagination);
+		s.pag.bind("click", s.pagination);
+		s.pag.bind("mouseenter", s.stopSlider);
+		s.pag.bind("mouseleave", s.changeSlider);
 
 	};
 
@@ -115,8 +118,37 @@ function Slider(sSelector) {
 		s.pagsItem.eq(index).addClass(s.pagActive);
 	}
 
+	var slideChanger;
+	s.changeDelay = 5000;
+	s.changeSlider = function () {
+		
+	    slideChanger = setInterval(changeSlide, s.changeDelay);
+		function changeSlide() {
 
+			s.shift ++;
+			s.display(s.shift);
 
-	s.cntrl.click(s.control);
+		};
+
+	}
+
+	s.stopSlider = function () {
+		
+		clearInterval(slideChanger);
+
+	}
+
+	var ifLoaded = setInterval(loading, 1000);
+	function loading() {
+
+		if (!sliderStart) return;
+		setTimeout(s.changeSlider(), s.changeDelay);
+		clearInterval(ifLoaded);
+
+	}
+
+	s.cntrl.bind("click", s.control);
+	s.cntrl.bind("mouseenter", s.stopSlider);
+	s.cntrl.bind("mouseleave", s.changeSlider);
 	$(document).ready(s.pagInit);
 }

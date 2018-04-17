@@ -1,7 +1,8 @@
 var width = 0,
     perfData = window.performance.timing,
     EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-    time = parseInt((EstimatedTime/1000)%60)*100;
+    time = parseInt((EstimatedTime/1000)%60)*100,
+    sliderStart = false;
 
 // Loadbar Animation
 $(".loader__bg").animate({
@@ -20,6 +21,10 @@ setTimeout(function(){
 		setTimeout(function(){
 
 			$('.loader').hide();
+			
+			p1 = new PageScroll('#bodyScroll');
+
+			sliderStart = true;
 
 		}, 2000);
 

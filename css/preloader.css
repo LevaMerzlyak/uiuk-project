@@ -2,11 +2,6 @@ body {
   background-color: #1b417b;
   font-family: sans-serif;
   font-size: 14px; }
-  body.loading {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: relative; }
 
 .loader {
   width: 310px;

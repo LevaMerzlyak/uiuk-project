@@ -1,11 +1,54 @@
 @import 'variables';
+body {
+	font-size: 14px;
+}
+.pages {
+	width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.page {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+}
+.textWrap {
+	position: relative;
+	overflow: hidden;
+}
+.head {
+	font-family: 'Bodoni', serif;
+	font-size: 5.7em;
+	letter-spacing: 0em;
+	font-weight: 700;
+	line-height: 0.8em;
+	color: $wht;
+}
+.subHead {
+	font-family: 'Bodoni', serif;
+	font-size: 3.1em;
+	font-weight: 700;
+	color: $wht;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	span {
+		font-size: 0.5em;
+	}
+}
 
 @import 'icons';
 @import 'grid';
 @import 'header';
+@import 'scroll-btn';
+@import 'page-pag';
+@import 'bg-part';
 @import 'main';
+@import 'areas';
+@import 'about';
+@import 'contacts';
 
-@media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 1500px) {
 	body {
 		font-size: 12px;
 	}

@@ -1,0 +1,67 @@
+.bg__part_about {
+	width: 10.4%;
+	&:before {
+		background-image: url(../images/about_main.jpg);
+		width: 44.8vw;
+	}
+	&:first-child {
+  		width: 13.6%;
+  	}
+}
+.aboutTxt {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 31.2%;
+	margin-left: 55.2%;
+	margin-right: 13.6%;
+}
+.textWrap_aboutTxt {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+.aboutTxt__txt {	
+	font-family: 'ProximaNova', sans-serif;
+	font-size: 1.3em;
+	line-height: 1.6em;
+	color: $wht;
+}
+.textWrap_aboutInfoBtn {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+.infoBtn {
+	display: inline-block;
+	width: 37%;
+	font-family: 'ProximaNova', sans-serif;
+	font-size: 1em;
+	line-height: 3em;
+	color: $wht;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 1px solid $wht;
+}
+.subHead,
+.aboutTxt__txt,
+.infoBtn {
+	transform: translateY(0%);
+	transition: transform 1.5s ease-in-out;
+}
+.page_current {
+		.subHead,
+		.aboutTxt__txt,
+		.infoBtn {
+			transform: translateY(0%);
+			transition-delay: 2.8s;
+	}
+}
+.page_fromBottom,
+.page_toTop {
+		.subHead,
+		.aboutTxt__txt,
+		.infoBtn {
+			transform: translateY(200%);
+			transition-delay: 0s;
+	}
+}
