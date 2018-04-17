@@ -30,7 +30,7 @@ function PageScroll(sSelector) {
 
 			if (index < p.current) {
 
-				if (!$(el).hasClass(toTop)) $(el).addClass(toTop);
+				if (!$(el).hasClass(toTop)) $(el).addClass(toTop).removeClass(fromBottom);
 
 			} else if (index == p.current) {
 
@@ -38,7 +38,7 @@ function PageScroll(sSelector) {
 
 			} else if (index > p.current) {
 
-				if (!$(el).hasClass(fromBottom)) $(el).addClass(fromBottom);
+				if (!$(el).hasClass(fromBottom)) $(el).addClass(fromBottom).removeClass(toTop);
 
 			}
 
