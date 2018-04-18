@@ -150,13 +150,11 @@ function PageScroll(sSelector) {
 
 	p.swipeCheck = function (event) {
 
-		event.preventDefault();
+		//event.preventDefault();
 
 		$(document).off("touchend", p.swipeCheck);
 
 		var y = event.changedTouches[0].screenY;
-
-		p.winH = $(window).width();
 
 		p.deltaY = y - p.startY;
 
@@ -201,6 +199,7 @@ function PageScroll(sSelector) {
 		}
 
 	});
+
 	$(document).on("touchstart", function (event) {
 
 		p.startY = event.changedTouches[0].screenY;
@@ -211,4 +210,10 @@ function PageScroll(sSelector) {
 
 	});
 	
+	$(window).on("resize", function () {
+		
+		p.winH = $(window).width();
+
+	});
+
 }

@@ -22,9 +22,9 @@
 	z-index: 150;
 }
 .textWrap_areasHead {
-	width: 28.6%;
+	width: calc((100% / 7) * 2);
 	height: 10em;
-	margin-right: 14.3%;
+	margin-right: calc(100% / 7);
 }
 .head_areas {
 	transition: transform 1.5s ease-in-out;
@@ -32,7 +32,7 @@
 .areasList {
 	display: flex;
 	flex-wrap: wrap;
-	width: 57.1%;
+	width: calc((100% / 7) * 4);
 	position: relative;
 	&:before,
 	&:after {
@@ -41,7 +41,7 @@
 		width: 1px;
 		height: 100%;
 		position: absolute;
-		left: -2px;
+		left: -1px;
 		background-color: $wht;
 		transition: height 1s ease-in-out;
 	}
