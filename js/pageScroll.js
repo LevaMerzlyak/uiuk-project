@@ -66,11 +66,15 @@ function PageScroll(sSelector) {
 
 		if (p.current != 0) {
 
-			s1.stopSlider();
+			s1.stopSlider();			
 
 		} else {
 
-			s1.changeSlider();
+			setTimeout(function () {
+
+				s1.changeSlider();
+
+			}, p.scrollDelay);
 
 		}
 
