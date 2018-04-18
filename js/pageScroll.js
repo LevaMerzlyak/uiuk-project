@@ -160,9 +160,9 @@ function PageScroll(sSelector) {
 
 		if (!p.deltaY) return;
 
-		if (p.deltaY / p.winH >= 0.5) p.scrollUp();
+		if (p.deltaY / p.winH >= 0.3) p.scrollUp();
 
-		if (p.deltaY / p.winH <= -0.5) p.scrollDown();
+		if (p.deltaY / p.winH <= -0.3) p.scrollDown();
 
 	}
 
