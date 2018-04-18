@@ -36,6 +36,22 @@ body {
 		font-size: 0.5em;
 	}
 }
+.btn {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	border: 1px solid $border;
+	border-radius: 50%;
+	.icon {
+		display: block;
+		width: 30%;
+		height: 30%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
 
 @import 'icons';
 @import 'grid';

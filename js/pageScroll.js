@@ -20,6 +20,10 @@ function PageScroll(sSelector) {
 	p.pags = p.body.find('.pagePag__item');
 	p.pag = p.body.find('.pagePag__link');
 
+	p.winH = $(window).width();
+	p.startY = 0;
+	p.deltaY = 0;
+
 	p.showPage = function () {
 
 		p.scrollBlock = true;
@@ -144,6 +148,24 @@ function PageScroll(sSelector) {
 
 	}
 
+	p.swipeCheck = function (event) {
+
+		$(document).off("touchend", p.swipeCheck);
+
+		var y = event.changedTouches[0].screenY;
+
+		p.winH = $(window).width();
+
+		p.deltaY = y - p.startY;
+
+		if (!p.deltaY) return;
+
+		if (p.deltaY / p.winH >= 0.5) p.scrollUp();
+
+		if (p.deltaY / p.winH <= -0.5) p.scrollDown();
+
+	}
+
 	p.scrollBtn.click(p.scrollBtnCheck);
 
 	p.pag.click(p.pagination);
@@ -161,6 +183,7 @@ function PageScroll(sSelector) {
 		}
 
 	});
+
 	$(document).on("mousewheel DOMMouseScroll", function (event) {
 		
 		if (p.scrollBlock) return;
@@ -174,6 +197,15 @@ function PageScroll(sSelector) {
 			p.scrollDown();
 
 		}
+
+	});
+	$(document).on("touchstart", function (event) {
+
+		p.startY = event.changedTouches[0].screenY;
+
+		p.deltaY = 0;
+
+		$(document).on("touchend", p.swipeCheck);
 
 	});
 	

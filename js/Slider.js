@@ -99,8 +99,6 @@ function Slider(sSelector) {
 	}
 
 	s.showSlide = function (index) {
-
-		console.log(index + "index");
 		
 		var  active = s.slider.find('.' + s.slideActive)
 			,prev = s.slider.find('.slide_prev')
