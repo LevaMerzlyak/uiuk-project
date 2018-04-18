@@ -150,6 +150,8 @@ function PageScroll(sSelector) {
 
 	p.swipeCheck = function (event) {
 
+		event.preventDefault();
+
 		$(document).off("touchend", p.swipeCheck);
 
 		var y = event.changedTouches[0].screenY;
