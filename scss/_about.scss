@@ -17,11 +17,14 @@
 	transition: opacity 0.5s ease-in-out;
 }
 .btn_play {
+	width: 88px;
+	height: 88px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	background-color: rgba(0,0,0,0.3);
+	z-index: 150;
 	.icon_play {
 		background-position: right center;
 	}

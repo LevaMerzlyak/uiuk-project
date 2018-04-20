@@ -1263,13 +1263,16 @@ body {
   transition: opacity 0.5s ease-in-out; }
 
 .btn_play {
+  width: 88px;
+  height: 88px;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 150; }
   .btn_play .icon_play {
     background-position: right center; }
 
@@ -2238,6 +2241,9 @@ body {
   .aboutTxt,
   .contactsTxt {
     top: 40vh; }
+  .btn_play {
+    width: 66px;
+    height: 66px; }
   .subHead {
     font-size: 2em; }
   .aboutTxt__txt {
