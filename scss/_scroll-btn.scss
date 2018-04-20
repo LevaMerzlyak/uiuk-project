@@ -4,7 +4,7 @@
 	left: 50%;
 	opacity: 0;
 	transform: translate(-50%, 200%);
-	z-index: 200;
+	z-index: 199;
 	transition: 1s transform 3s, 0.5s opacity 3.4s;
 }
 .loaded {

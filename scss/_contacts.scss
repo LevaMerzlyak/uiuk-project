@@ -4,20 +4,20 @@
 		background-image: url(../images/contacts_main.jpg);
 		width: 55.2vw;
 	}
-	@for $i from 2 through 6 {
+	@for $i from 1 through 5 {
 		&:nth-child(#{$i}) {
-    		right: 13.6% + ((5 - $i) * 10.4%);
+    		right: 13.6% + ((4 - $i) * 10.4%);
     		&:before {
-    			left: 0% - (($i - 2) * 100%);
+    			left: 0% - (($i - 1) * 100%);
     		}
     	}
   	}
-  	&:nth-child(2) {
+  	&:nth-child(1) {
   		&:before {
   			left: 0;
   		}
   	}
-  	&:nth-child(6) {
+  	&:nth-child(5) {
   		width: 13.6%;
   		right: 0;
   		&:before {
@@ -27,7 +27,7 @@
 }
 .page_current {
 	.bg__part_contacts {
-		@for $i from 2 through 6 {
+		@for $i from 1 through 5 {
 			&:nth-child(#{$i}) {
 	    		transition: width 1.5s ease-in-out 0s, transform 1s ease-in-out 1.8s + ($i * 0.2s);
 	    	}
@@ -36,8 +36,7 @@
 }
 .page_fromBottom {
 	.bg__part_contacts {
-		transform: translateY(100%);
-		@for $i from 2 through 6 {
+		@for $i from 1 through 5 {
 			&:nth-child(#{$i}) {
 	    		transition: width 1.5s ease-in-out 0s, transform 1s ease-in-out 0.8s + ($i * 0.2s);
 	    	}
@@ -86,14 +85,14 @@
 		cursor: inherit;
 	}
 }
-.subHead,
+.subHead_contacts,
 .contactsTxt__subHead,
 .contactsTxt__txt {
 	transform: translateY(0%);
 	transition: transform 1.5s ease-in-out;
 }
 .page_current {
-		.subHead,
+		.subHead_contacts,
 		.contactsTxt__subHead,
 		.contactsTxt__txt {
 			transform: translateY(0%);
@@ -102,7 +101,7 @@
 }
 .page_fromBottom,
 .page_toTop {
-		.subHead,
+		.subHead_contacts,
 		.contactsTxt__subHead,
 		.contactsTxt__txt {
 			transform: translateY(200%);

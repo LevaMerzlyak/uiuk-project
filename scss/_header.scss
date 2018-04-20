@@ -1,4 +1,4 @@
-header {
+.header {
 	display: flex;
 	align-items: center;
 	position: fixed;
@@ -8,7 +8,7 @@ header {
 	transition: 1.5s transform 1s ease;
 }
 .loaded {
-	header {
+	.header {
 		transform: translateY(0%);
 	}
 }
@@ -116,6 +116,7 @@ header {
 	}
 }
 .lang__link {
+	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: $grey;

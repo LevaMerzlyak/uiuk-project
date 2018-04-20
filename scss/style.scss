@@ -21,10 +21,12 @@ body {
 .head {
 	font-family: 'Bodoni', serif;
 	font-size: 5.7em;
-	letter-spacing: 0em;
 	font-weight: 700;
+	letter-spacing: 0em;
 	line-height: 0.8em;
 	color: $wht;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
 }
 .subHead {
 	font-family: 'Bodoni', serif;
@@ -64,6 +66,8 @@ body {
 @import 'areas';
 @import 'about';
 @import 'contacts';
+@import 'mobile-menu';
+@import 'mobile';
 
 @media only screen and (max-width: 1500px) {
 	body {

@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
 	<title>ukriniurkoleguia</title>
 	<!-- Preloader -->
 	<link rel="stylesheet" type="text/css" href="css/preloader.css">
@@ -27,7 +28,7 @@
 		<div class="grid__line"></div>
 		<div class="grid__line"></div>
 	</div>
-	<header>
+	<header class="header" id="mobMenu">
 		<a href="#" class="logo">Logo</a>
 		<ul class="menu">
 			<li class="menu__item menu__item_active">
@@ -54,6 +55,11 @@
 				<a href="#" class="lang__link">Ua</a>
 			</li>
 		</ul>
+		<div class="mobMenu">
+			<a href="#" class="btn btn_mobMenu">
+				<span class="btn__line"></span>
+			</a>
+		</div>
 	</header>
 	<div class="pages" id="bodyScroll">
 		<main class="main page page_current">
@@ -187,9 +193,14 @@
 			<div class="bg__part bg__part_about"></div>
 			<div class="bg__part bg__part_about"></div>
 			<div class="bg__part bg__part_about"></div>
+			<div class="playBtn">
+				<a href="#" class="btn btn_play">
+					<i class="icon icon_play"></i>
+				</a>
+			</div>
 			<div class="aboutTxt">
 				<div class="textWrap textWrap_aboutHead">
-					<h2 class="subHead"><span>About</span> Ukriniurkoleguia</h2>			
+					<h2 class="subHead subHead_about"><span>About</span> Ukriniurkoleguia</h2>			
 				</div>
 				<div class="textWrap textWrap_aboutTxt">
 					<p class="aboutTxt__txt">The Ukrainian Bar Association for Foreign Affairs is one of the oldest and most renowned legal institutions in Ukraine, established on the foundation of the Ukrainian Representative Office of the former Iniurkolleguia of the USSR, which functioned since 1937.</p>
@@ -200,9 +211,14 @@
 			</div>
 		</section>
 		<section class="contacts page page_fromBottom">
+			<div class="bg__part bg__part_contacts"></div>
+			<div class="bg__part bg__part_contacts"></div>
+			<div class="bg__part bg__part_contacts"></div>
+			<div class="bg__part bg__part_contacts"></div>
+			<div class="bg__part bg__part_contacts"></div>
 			<div class="contactsTxt">
 				<div class="textWrap textWrap_contactsHead">
-					<h2 class="subHead">Headquarters</h2>
+					<h2 class="subHead subHead_contacts">Headquarters</h2>
 				</div>
 				<div class="textWrap textWrap_contactsSubHead">
 					<h3 class="contactsTxt__subHead">Contacts</h3>
@@ -220,11 +236,6 @@
 					<p class="contactsTxt__txt">E-mail: <a href="mailto:info@ukrinur.com">info@ukrinur.com</a></p>
 				</div>
 			</div>
-			<div class="bg__part bg__part_contacts"></div>
-			<div class="bg__part bg__part_contacts"></div>
-			<div class="bg__part bg__part_contacts"></div>
-			<div class="bg__part bg__part_contacts"></div>
-			<div class="bg__part bg__part_contacts"></div>
 		</section>
 		<a href="#" class="scrollBtn btn"><i class="icon icon_down"></i></a>
 		<ul class="pagePag">
@@ -242,6 +253,11 @@
 	<script type="text/javascript" src="js/Slider.js"></script>
 	<script>
 		s1 = new Slider('#slider');
+	</script>
+	<!-- Mobile Menu -->
+	<script type="text/javascript" src="js/mobMenu.js"></script>
+	<script>
+		m1 = new MobileMenu('#mobMenu');
 	</script>
 	<!-- Page Scroll -->
 	<script type="text/javascript" src="js/pageScroll.js"></script>
