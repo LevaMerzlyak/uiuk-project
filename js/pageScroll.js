@@ -20,7 +20,8 @@ function PageScroll(sSelector) {
 	p.pags = p.body.find('.pagePag__item');
 	p.pag = p.body.find('.pagePag__link');
 
-	p.winH = $(window).width();
+	p.winH = $(window).height();
+	p.winW = $(window).width();
 	p.startY = 0;
 	p.deltaY = 0;
 
@@ -165,6 +166,13 @@ function PageScroll(sSelector) {
 		if (p.deltaY / p.winH <= -0.3) p.scrollDown();
 
 	}
+	p.checkWidth = function () {
+
+		p.winW = $(window).width();
+		
+		if (p.winW <= 1000) p.scrollDelay = 1800;
+
+	}
 
 	p.scrollBtn.click(p.scrollBtnCheck);
 
@@ -202,6 +210,8 @@ function PageScroll(sSelector) {
 
 	$(document).on("touchstart", function (event) {
 
+		if (p.scrollBlock) return;
+
 		p.startY = event.changedTouches[0].screenY;
 
 		p.deltaY = 0;
@@ -212,8 +222,11 @@ function PageScroll(sSelector) {
 	
 	$(window).on("resize", function () {
 		
-		p.winH = $(window).width();
+		p.winH = $(window).height();
+		
+		p.checkWidth();
 
 	});
+	$(document).ready(p.checkWidth);
 
 }
