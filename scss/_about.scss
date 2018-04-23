@@ -23,26 +23,24 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	background-color: rgba(0,0,0,0.3);
+	background-color: transparent;
 	z-index: 150;
+	box-sizing: border-box;
+	padding: 28px 26px 28px 34px;
+	transition: all 1s ease-in-out;
 	.icon_play {
-		background-position: right center;
+		width: 0;
+		height: 0;
+		border-left: 26px solid $wht;
+		border-top: 15px solid transparent;
+		border-bottom: 15px solid transparent;
+		top: auto;
+		left: auto;
+		transform: translate(0%, 0%);
 	}
 }
 .btn_play:hover {
-	animation-name: playHover;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
-}
-@keyframes playHover {
-	0% {
-		box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.1);
-	}
-	100% {
-		box-shadow: 0px 0px 20px 0px rgba(127,166,227,0.5);
-	}
+	background-color: $blu;
 }
 .aboutTxt {
 	position: absolute;
