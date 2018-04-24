@@ -2440,15 +2440,16 @@ body {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
-  -webkit-transition: -webkit-transform 1s ease-in-out 1s;
-  transition: -webkit-transform 1s ease-in-out 1s;
-  -o-transition: transform 1s ease-in-out 1s;
-  transition: transform 1s ease-in-out 1s;
-  transition: transform 1s ease-in-out 1s, -webkit-transform 1s ease-in-out 1s; }
+  -webkit-transition: -webkit-transform 1s ease-in-out 1.5s;
+  transition: -webkit-transform 1s ease-in-out 1.5s;
+  -o-transition: transform 1s ease-in-out 1.5s;
+  transition: transform 1s ease-in-out 1.5s;
+  transition: transform 1s ease-in-out 1.5s, -webkit-transform 1s ease-in-out 1.5s; }
 
 .video__wrap {
   width: 60%;
   height: 0;
+  padding-bottom: 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2456,13 +2457,17 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.2);
-  -webkit-transition: height 1s ease-in-out 0s;
-  -o-transition: height 1s ease-in-out 0s;
-  transition: height 1s ease-in-out 0s;
+  -webkit-transition: all 1s ease-in-out 0.5s;
+  -o-transition: all 1s ease-in-out 0.5s;
+  transition: all 1s ease-in-out 0.5s;
   overflow: hidden; }
+
+.video-js {
+  position: absolute !important; }
 
 .video {
   width: 100%;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2470,9 +2475,9 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in-out 0.5s;
-  -o-transition: opacity 0.5s ease-in-out 0.5s;
-  transition: opacity 0.5s ease-in-out 0.5s; }
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s; }
 
 .btn_videoClose {
   position: absolute;
@@ -2525,18 +2530,23 @@ body {
     transition: transform 1s ease-in-out 0s;
     transition: transform 1s ease-in-out 0s, -webkit-transform 1s ease-in-out 0s; }
   .videoAbout_open .video__wrap {
-    -webkit-transition: height 1s ease-in-out 1s;
-    -o-transition: height 1s ease-in-out 1s;
-    transition: height 1s ease-in-out 1s; }
-  .videoAbout_open .video__wrap_resize {
-    -webkit-transition: height 0.2s ease-in-out 0s;
-    -o-transition: height 0.2s ease-in-out 0s;
-    transition: height 0.2s ease-in-out 0s; }
+    padding-bottom: calc(60% * 9 / 16);
+    -webkit-transition: all 1s ease-in-out 1s;
+    -o-transition: all 1s ease-in-out 1s;
+    transition: all 1s ease-in-out 1s; }
   .videoAbout_open .video {
     opacity: 1;
-    -webkit-transition: opacity 0.5s ease-in-out 2s;
-    -o-transition: opacity 0.5s ease-in-out 2s;
-    transition: opacity 0.5s ease-in-out 2s; }
+    -webkit-transition: all 0.5s ease-in-out 2s;
+    -o-transition: all 0.5s ease-in-out 2s;
+    transition: all 0.5s ease-in-out 2s; }
+  .videoAbout_open .video__wrap_resize {
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s; }
+    .videoAbout_open .video__wrap_resize .video {
+      -webkit-transition: all 0.2s ease-in-out 0s;
+      -o-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s; }
   .videoAbout_open .btn_videoClose {
     opacity: 1;
     -webkit-transition: opacity 0.5s ease-in-out 1s;
@@ -2546,16 +2556,22 @@ body {
 @media only screen and (max-width: 1250px) {
   .video__wrap {
     width: 90%; }
+  .videoAbout_open .video__wrap {
+    padding-bottom: calc(90% * 9 / 16); }
   .btn_videoClose {
     margin-right: 1em; } }
 
 @media only screen and (max-width: 1000px) {
   .video__wrap {
-    width: 75%; } }
+    width: 75%; }
+  .videoAbout_open .video__wrap {
+    padding-bottom: calc(75% * 9 / 16); } }
 
 @media only screen and (max-width: 1000px) and (orientation: portrait) {
   .video__wrap {
-    width: 95%; } }
+    width: 95%; }
+  .videoAbout_open .video__wrap {
+    padding-bottom: calc(95% * 9 / 16); } }
 
 @media only screen and (max-width: 1500px) {
   body {

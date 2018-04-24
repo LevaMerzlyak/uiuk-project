@@ -7,7 +7,7 @@ function VideoPlay(sSelector) {
 	v.container = $('.videoAbout__wrap');
 	v.playerWrap = v.container.find('.video__wrap')
 	v.player = v.container.find('#video1');
-	v.playerDOM = v.player.get(0);
+	v.videoPlayer = videojs('#video1');
 
 	v.closeBtn = v.container.find('.btn_videoClose');
 
@@ -16,26 +16,14 @@ function VideoPlay(sSelector) {
 	var opened = 'videoAbout_open';
 
 	v.playPause = function () {
-
-		v.playerDOM.onvolumechange = function() {
-
-			v.volumeChanged = true;
-
-		}
-
-		if (!v.volumeChanged) {
-
-			v.playerDOM.volume = 0.2;
-
-		}
 		
-		if (v.playerDOM.paused) {
+		if (v.videoPlayer.paused) {
 
-			v.playerDOM.play();
+			v.videoPlayer.play();
 
 		} else {
 
-			v.playerDOM.pause();
+			v.videoPlayer.pause();
 
 		}
 
@@ -48,8 +36,6 @@ function VideoPlay(sSelector) {
 		v.container.addClass(opened);
 
 		p1.scrollBlock = !p1.scrollBlock;
-		
-		v.setHeight();
 
 		setTimeout(function () {
 			
@@ -69,29 +55,19 @@ function VideoPlay(sSelector) {
 
 		v.playerWrap.css('height', 0);
 
-		v.playerDOM.pause();
+		v.videoPlayer.pause();
 
 	}
 
-	v.setHeight = function (event) {
+	v.setHeight = function () {
 
-		var height = v.player.height();
+		v.playerWrap.addClass('video__wrap_resize');
 
-		v.playerWrap.css('height', height);
+		setTimeout(function () {
+			
+			v.playerWrap.removeClass('video__wrap_resize');
 
-		if (event) {
-
-			console.log('resize');
-
-			v.playerWrap.addClass('video__wrap_resize');
-
-			setTimeout(function () {
-				
-				v.playerWrap.removeClass('video__wrap_resize');
-
-			}, 2000);
-
-		}
+		}, 2000);
 
 	}
 
