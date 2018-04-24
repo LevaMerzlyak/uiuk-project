@@ -39,7 +39,7 @@ function VideoPlay(sSelector) {
 
 		setTimeout(function () {
 			
-			if (v.winW > 1025) v.playPause();
+			v.playPause();
 
 		}, 2000);
 
@@ -55,7 +55,7 @@ function VideoPlay(sSelector) {
 
 		v.playerWrap.css('height', 0);
 
-		if (v.winW > 1025) v.videoPlayer.pause();
+		v.videoPlayer.pause();
 
 	}
 
