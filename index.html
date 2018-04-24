@@ -194,7 +194,7 @@
 			<div class="bg__part bg__part_about"></div>
 			<div class="bg__part bg__part_about"></div>
 			<div class="playBtn">
-				<a href="#" class="btn btn_play">
+				<a href="#" class="btn btn_play" id="playBtn1">
 					<i class="icon icon_play"></i>
 				</a>
 			</div>
@@ -245,6 +245,18 @@
 			<li class="pagePag__item"><a href="#" class="pagePag__link"></a></li>
 		</ul>
 	</div>
+	<div class="videoAbout__wrap">
+		<div class="videoAbout">
+			<div class="video__wrap">
+				<video class="video" id="video1" controls>
+					<source src="video/SampleVideo.mp4" type="video/mp4">
+				</video>
+			</div>
+			<a href="#" class="btn btn_videoClose">
+				<span class="btn__line"></span>
+			</a>
+		</div>
+	</div>
 		<!-- jQuery -->
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 		<!-- Preloader -->
@@ -258,6 +270,11 @@
 	<script type="text/javascript" src="js/mobMenu.js"></script>
 	<script>
 		m1 = new MobileMenu('#mobMenu');
+	</script>
+	<!-- Video Play -->
+	<script type="text/javascript" src="js/videoPlay.js"></script>
+	<script>
+		v1 = new VideoPlay('#playBtn1');
 	</script>
 	<!-- Page Scroll -->
 	<script type="text/javascript" src="js/pageScroll.js"></script>
