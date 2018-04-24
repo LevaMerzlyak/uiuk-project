@@ -2216,7 +2216,7 @@ body {
   .textWrap_aboutInfoBtn {
     text-align: left; }
   .bg__part_about {
-    display: none; }
+    /*display:  none;*/ }
   .playBtn {
     width: 44px;
     height: 44px;
@@ -2227,8 +2227,19 @@ body {
     right: 0; }
   .textWrap_contactsSubHead {
     margin-top: 2em; }
-  .bg__part_contacts {
-    height: 100%; } }
+  .bg__part_contacts,
+  .bg__part_about {
+    height: 100%; }
+  .page_toTop .bg__part_about,
+  .page_toTop .bg__part_contacts {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%); }
+  .page_fromBottom .bg__part_about,
+  .page_fromBottom .bg__part_contacts {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%); } }
 
 @media only screen and (max-width: 750px) and (orientation: landscape) {
   .playBtn {
