@@ -23,6 +23,8 @@ function VideoPlay(sSelector) {
 
 		p1.scrollBlock = !p1.scrollBlock;
 
+		v.videoPlayer = videojs('#video1');
+
 		setTimeout(function () {
 			
 			v.videoPlayer.play();
@@ -39,7 +41,7 @@ function VideoPlay(sSelector) {
 
 		p1.scrollBlock = !p1.scrollBlock;
 
-		v.playerWrap.css('height', 0);
+		v.videoPlayer = videojs('#video1');
 
 		v.videoPlayer.pause();
 
