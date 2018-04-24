@@ -7,7 +7,7 @@ function VideoPlay(sSelector) {
 	v.container = $('.videoAbout__wrap');
 	v.playerWrap = v.container.find('.video__wrap')
 	v.player = v.container.find('#video1');
-	v.videoPlayer = videojs('#video1');
+	//v.videoPlayer = videojs('#video1');
 
 	v.closeBtn = v.container.find('.btn_videoClose');
 
