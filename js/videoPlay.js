@@ -11,7 +11,7 @@ function VideoPlay(sSelector) {
 
 	v.closeBtn = v.container.find('.btn_videoClose');
 
-	v.volumeChanged = false;
+	v.winW = $(window).width();
 
 	var opened = 'videoAbout_open';
 
@@ -39,7 +39,7 @@ function VideoPlay(sSelector) {
 
 		setTimeout(function () {
 			
-			v.playPause();
+			if (v.winW > 1025) v.playPause();
 
 		}, 2000);
 
@@ -55,11 +55,13 @@ function VideoPlay(sSelector) {
 
 		v.playerWrap.css('height', 0);
 
-		v.videoPlayer.pause();
+		if (v.winW > 1025) v.videoPlayer.pause();
 
 	}
 
 	v.setHeight = function () {
+
+		v.winW = $(window).width();
 
 		v.playerWrap.addClass('video__wrap_resize');
 
