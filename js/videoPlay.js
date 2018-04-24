@@ -5,9 +5,9 @@ function VideoPlay(sSelector) {
 	v.playBtn = $(sSelector);
 
 	v.container = $('.videoAbout__wrap');
-	v.playerWrap = v.container.find('.video__wrap')
-	v.player = v.container.find('#video1');
-	v.videoPlayer = videojs('#video1');
+	v.playerWrap = v.container.find('.video__wrap');
+	v.videoID = v.playerWrap.find('video').attr('id');
+	v.videoPlayer = videojs(v.videoID);
 
 	v.closeBtn = v.container.find('.btn_videoClose');
 
@@ -23,7 +23,7 @@ function VideoPlay(sSelector) {
 
 		p1.scrollBlock = !p1.scrollBlock;
 
-		v.videoPlayer = videojs('#video1');
+		//v.videoPlayer = videojs('#video1');
 
 		setTimeout(function () {
 			
@@ -41,7 +41,7 @@ function VideoPlay(sSelector) {
 
 		p1.scrollBlock = !p1.scrollBlock;
 
-		v.videoPlayer = videojs('#video1');
+		//v.videoPlayer = videojs('#video1');
 
 		v.videoPlayer.pause();
 
