@@ -4,7 +4,8 @@
 	width: 0;
 	overflow: hidden;
 	transition: width 1.5s ease-in-out 0s, transform 1.5s ease-in-out 0s;
-	&:before {
+	&:before,
+	&:after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -13,6 +14,9 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+	&:after {
+		background-color: rgba(0,0,0,0.5);
 	}
 
 	@for $i from 1 through 9 {
