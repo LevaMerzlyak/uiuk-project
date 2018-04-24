@@ -18,7 +18,7 @@ function MobileMenu(sSelector) {
 
 		$('.grid').toggleClass('grid_mobMenu');
 
-		if (m.header.hasClass(opened) && p1.current = 0) {
+		if (m.header.hasClass(opened) && p1.current == 0) {
 
 			s1.stopSlider();
 

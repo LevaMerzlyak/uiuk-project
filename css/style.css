@@ -2517,6 +2517,10 @@ body {
     -webkit-transition: height 1s ease-in-out 1s;
     -o-transition: height 1s ease-in-out 1s;
     transition: height 1s ease-in-out 1s; }
+  .videoAbout_open .video__wrap_resize {
+    -webkit-transition: height 0.2s ease-in-out 0s;
+    -o-transition: height 0.2s ease-in-out 0s;
+    transition: height 0.2s ease-in-out 0s; }
   .videoAbout_open .video {
     opacity: 1;
     -webkit-transition: opacity 0.5s ease-in-out 2s;
