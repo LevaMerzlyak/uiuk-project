@@ -15,20 +15,6 @@ function VideoPlay(sSelector) {
 
 	var opened = 'videoAbout_open';
 
-	v.playPause = function () {
-		
-		if (v.videoPlayer.paused) {
-
-			v.videoPlayer.play();
-
-		} else {
-
-			v.videoPlayer.pause();
-
-		}
-
-	}
-
 	v.playStart = function (event) {
 
 		event.preventDefault();		
@@ -39,9 +25,9 @@ function VideoPlay(sSelector) {
 
 		setTimeout(function () {
 			
-			v.playPause();
+			v.videoPlayer.play();
 
-		}, 2000);
+		}, 2500);
 
 	}
 
