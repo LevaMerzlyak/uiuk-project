@@ -44,3 +44,16 @@
 		}
 	}
 }
+@media only screen and (max-width: 1000px) {
+	.grid__line {
+		width: 40%;
+		@for $i from 4 through 8 {
+			&:nth-child(#{$i}) {
+				display: none;
+			}
+		}
+		&:first-child {
+			width: 10%;
+		}
+	}
+}

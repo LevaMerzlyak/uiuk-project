@@ -16,6 +16,18 @@ function MobileMenu(sSelector) {
 		
 		$('.grid').toggleClass('grid_mobMenu');
 
+		p1.scrollBlock = !p1.scrollBlock;
+
+		if (m.header.hasClass(opened) && p1.current == 0) {
+
+			s1.stopSlider();
+
+		} else {
+
+			s1.changeSlider();
+			
+		}
+
 	}
 	
 	m.btn.click(m.openClose);

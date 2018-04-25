@@ -73,3 +73,50 @@
 	  	}
 	}
 }
+@media only screen and (max-width: 1000px) {
+	.bg__part {
+		@for $i from 5 through 9 {
+			&:nth-child(#{$i}) {
+				display: none;
+			}
+		}
+		@for $i from 1 through 4 {
+			&:nth-child(#{$i}) {
+	    		right: 10% + ((3 - $i) * 40%);
+	    		&:before {
+	    			left: -25% - (($i - 2) * 100%);
+	    		}
+	    	}
+	    }
+	    &:nth-child(1) {
+  		&:before {
+  			left: 0;
+  		}
+  	}
+	    &:nth-child(4) {
+	  		right: 0;
+	  		&:before {
+	  			left: -900%;
+	  		}
+	  	}
+	}
+	.page_current {
+		.bg__part {
+			@for $i from 1 through 4 {
+				&:nth-child(#{$i}) {
+		    		transition: width 1.5s ease-in-out 0s, transform 1s ease-in-out 0.5s + ($i * 0.2s);
+		    	}
+		  	}
+		}
+	}
+	.page_fromBottom,
+	.page_toTop {
+		.bg__part {
+			@for $i from 1 through 4 {
+				&:nth-child(#{$i}) {
+		    		transition: width 1.5s ease-in-out 0s, transform 1s ease-in-out ($i * 0.2s);
+		    	}
+		  	}
+		}
+	}
+}
