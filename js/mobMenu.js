@@ -14,7 +14,7 @@ function MobileMenu(sSelector) {
 
 		m.header.toggleClass(opened);
 		
-		$('.grid').toggleClass('grid_mobMenu');
+		$('.grid_top').toggleClass('grid_mobMenu');
 
 	}
 	

@@ -11,16 +11,10 @@ $(".loader__bg").animate({
 
 setTimeout(function(){
 
-	$('body').removeClass('loading').addClass('loaded');
+	$('body').removeClass('loading').addClass('loaded');		
 
-	setTimeout(function(){
-
-		setTimeout(function(){
-
-			$('.loader').hide();
-
-		}, 2000);
-
-	}, 2000);	
+		$('.loader').animate({
+			opacity: 0
+		}, 1000);	
 
 }, time);
