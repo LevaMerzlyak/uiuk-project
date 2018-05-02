@@ -13,15 +13,17 @@ setTimeout(function(){
 
 	$('body').removeClass('loading').addClass('loaded');
 
-	setTimeout(function(){
+	
 
-		setTimeout(function(){
+		
 
-			$('.loader').hide();
+			$('.loader').animate({
+				opacity: 0
+			}, 1000);
 			
-		}, 2000);
+		
 
-	}, 2000);
+	
 
 	
 
