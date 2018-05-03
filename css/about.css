@@ -21,10 +21,13 @@ body {
   transition: transform 1s ease-in-out 2s;
   transition: transform 1s ease-in-out 2s, -webkit-transform 1s ease-in-out 2s; }
 
-.loaded .anim__txt {
-  -webkit-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  transform: translateY(0%); }
+.loaded {
+  overflow: visible;
+  height: auto; }
+  .loaded .anim__txt {
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%); }
 
 .head {
   font-family: 'Bodoni', serif;
@@ -46,16 +49,6 @@ body {
     top: 0;
     left: 0;
     background-color: #fff; }
-
-.subHead {
-  font-family: 'Bodoni', serif;
-  font-size: 3.1em;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 0em;
-  text-transform: uppercase; }
-  .subHead span {
-    font-size: 0.5em; }
 
 .btn {
   display: inline-block;

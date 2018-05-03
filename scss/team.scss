@@ -17,6 +17,8 @@ body {
 	transition: transform 1s ease-in-out 2s;
 }
 .loaded {
+	overflow: visible;
+	height: auto;
 	.anim__txt {
 		transform: translateY(0%);
 	}
@@ -69,7 +71,7 @@ body {
 @import 'header';
 @import 'bg-part';
 @import 'about-main';
-@import 'about-about';
+@import 'about-team';
 @import 'mobile-menu';
 
 @media only screen and (max-width: 1500px) {

@@ -3,11 +3,13 @@ body {
 	background-color: $blu;
 	font-family: sans-serif;
 	font-size: 14px;
+	overflow: hidden;
+	height: 100vh;
 }
 .loader {
 	width: 310px;
 	height: 191.6px;
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);

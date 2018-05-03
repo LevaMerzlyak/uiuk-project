@@ -17,6 +17,8 @@ body {
 	transition: transform 1s ease-in-out 2s;
 }
 .loaded {
+	overflow: visible;
+	height: auto;
 	.anim__txt {
 		transform: translateY(0%);
 	}
