@@ -13,6 +13,13 @@
 	font-style: normal;
 }
 @font-face {
+	font-family: 'ProximaNova';
+	src: url('fonts/ProximaNova-Light.eot');
+	src: local('☺'), url('fonts/ProximaNova-Light.woff') format('woff'), url('fonts/ProximaNova-Light.ttf') format('truetype'), url('fonts/ProximaNova-Light.svg') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
 	font-family: 'GothamPro';
 	src: url('fonts/GothamPro.eot');
 	src: local('☺'), url('fonts/GothamPro.woff') format('woff'), url('fonts/GothamPro.ttf') format('truetype'), url('fonts/GothamPro.svg') format('svg');
