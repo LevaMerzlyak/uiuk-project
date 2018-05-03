@@ -1,0 +1,181 @@
+.header{
+	position: absolute;
+}
+.grid {
+	position: absolute;
+}
+.bg__part_main {
+	transition: width 1.5s ease-in-out 0s, transform 1.5s ease-in-out 0s;
+	&:before {
+		width: 44.8vw;
+	}
+}
+.loaded {
+	.bg__part{
+		width: 10.4%;
+		&:first-child {
+	  		width: 13.6%;
+	  	}
+	}
+}
+.mainTxt {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: calc(100% - 10em);
+	margin-top: 10em;
+	margin-left: 55.2%;
+	margin-right: 13.6%;
+}
+.textWrap_position {
+	margin-top: 2em;
+	margin-bottom: 3em;
+}
+.member__position {
+	font-family: 'ProximaNova', sans-serif;
+	font-size: 1.43em;
+	font-weight: 400;
+	color: $wht;
+	letter-spacing: 0.01em;
+	line-height: 1.25em;
+}
+.textWrap_txt {
+	margin-bottom: 2em;
+}
+.main__txt {
+	font-family: 'ProximaNova', sans-serif;
+	font-size: 1.14em;
+	font-weight: 400;
+	color: $wht;
+	letter-spacing: 0.01em;
+	line-height: 1.9em;
+}
+.main__txt_sup {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1250px) {}
+	
+@media only screen and (max-width: 1000px) {
+	.loaded {
+		.bg__part_main {
+			width: 40%;
+			&:first-child {
+		  		width: 10%;
+		  	}
+		  	&:nth-child(4) {
+		  		width: 10%;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+	.bg__part_main {
+		&:before {
+			width: 100vw;
+		}
+	}
+	.mainTxt {
+		justify-content: flex-end;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+	.main {
+		height: auto;
+	}
+	.grid {
+		position: fixed;
+	}
+	.bg__part_main {
+		&:before {
+			width: 50vw;
+		}
+		&:nth-child(3),
+		&:nth-child(4) {
+			display: none;
+		}
+	}
+	.mainTxt {
+		justify-content: flex-start;
+		margin-left: 50%;
+		margin-right: 10%;
+		margin-top: calc(44px + 2em);
+	}
+	.textWrap_position {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+	.textWrap_txt {
+		margin-bottom: 1em;
+	}
+}
+@media only screen and (max-width: 700px) and (orientation: landscape) {
+	.head {
+		font-size: 3.5em;
+	}
+}
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+	.bg__part_main {
+		height: 100vh;
+	}
+	.mainTxt {
+		margin-left: 10%;
+	}
+	.head {
+		font-size: 3em;
+	}
+	.textWrap_head,
+	.textWrap_position,
+	.textWrap_lang,
+	.textWrap_info {
+		margin-left: 50%;
+	}
+	.textWrap_position {
+		margin-bottom: 2em;
+	}
+	.textWrap_txt {
+		margin-bottom: 2em;
+	}
+}
+@media only screen and (max-width: 500px) and (orientation: landscape) {
+	.head {
+		font-size: 2.5em;
+	}
+	.textWrap_info {
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width: 420px) and (orientation: portrait) {
+	.grid {
+		position: fixed;
+	}
+	.main {
+		height: auto;
+	}
+	.bg__part_main {
+		height: 65vh;
+	}
+	.mainTxt {
+		height: auto;
+		margin-top: 70vh;
+	}
+}
+@media only screen and (max-width: 370px) and (orientation: portrait) {
+	.head {
+		font-size: 4em;
+	}
+}
+@media only screen and (max-width: 350px) and (orientation: portrait) {
+	.head {
+		font-size: 3.5em;
+	}
+	.bg__part_main {
+		height: 75vh;
+	}
+	.mainTxt {
+		margin-top: 80vh;
+	}
+}
