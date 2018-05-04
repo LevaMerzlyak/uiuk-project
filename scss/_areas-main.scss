@@ -46,15 +46,14 @@
 	margin-left: 13.6%;
 	margin-right: 55.2%;
 }
-.mainMenu {
-	/*width: 100%;*/
+.textWrap_head {
+	margin-bottom: 4em;
 }
 .mainMenu__item {
 	box-sizing: border-box;
-	padding-left: 2em;
 	position: relative;
 	&:not(:last-child) {
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 	}
 	&:before {
 		content: "";
@@ -71,18 +70,6 @@
 		transition: all 1.5s ease-in-out 2s;
 	}
 }
-.loaded {
-	.mainMenu__item {
-		&:before {
-			border: 1px solid $wht;
-		}
-	}
-	.mainMenu__item_active {
-		&:before {
-			background-color: $wht;		
-		}
-	}
-}
 .mainMenu__link {
 	font-family: 'ProximaNova', sans-serif;
 	font-size: 1em;
@@ -92,83 +79,158 @@
 	line-height: 1.3em;
 	text-decoration: none;
 	text-transform: uppercase;
-	display: block;
+	display: block;	
+	padding-left: 2em;
 }
-@media only screen and (max-width: 1250px) {
-	.textWrap_head {
-		width: calc((100% / 7) * 5);
+.serviceList {
+	margin-left: calc(100% / 3);
+	height: 0;
+	transition: all 1.5s ease-in-out 2s;
+}
+.serviceList__item {
+	position: relative;
+	opacity: 0;
+	transition: all 1.5s ease-in-out 2.5s;
+	&:not(:last-child) {
+		margin-bottom: 1em;
 	}
-	.mainMenu {
-		width: 100%;
+	&:before {
+		content: "";
+		display: block;
+		width: 0.1em;
+		height: 0.1em;
+		border-radius: 50%;
+		border: 1px solid $wht;
+		background-color: $wht;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		transition: all 1.5s ease-in-out 2s;
+	}
+}
+.serviceList__link {
+	font-family: 'ProximaNova', sans-serif;
+	font-size: 1em;
+	font-weight: 300;
+	color: $wht;
+	letter-spacing: 0.01em;
+	line-height: 1em;
+	text-decoration: none;
+	display: block;
+	padding-left: 2em;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.serviceList__link_active {
+	text-decoration: underline;
+}
+.mainMenu__item_active {
+	&:not(:last-child) {
+		margin-bottom: 2em;
+	}
+	&:last-child {
+		margin-top: 2em;
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 0.2em;
+		height: 100%;
+		border-radius: 0%;
+		background-color: transparent;
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform: translate(0%,0%);
+		transition: all 1.5s ease-in-out 2s;
+	}
+	.mainMenu__link {
+		font-family: 'Bodoni', serif;
+		font-size: 2.1em;
+		font-weight: 700;
+		line-height: 1em;
+		margin-bottom: 1em;
+		padding-left: 1em;
+	}
+}
+.loaded {
+	.mainMenu__item {
+		&:before {
+			border: 1px solid $wht;
+		}
+	}
+	.mainMenu__item_active {
+		&:before {
+			background-color: $wht;
+		}
+		.serviceList {
+			height: auto;
+		}
+		.serviceList__item {
+			opacity: 1;
+		}
 	}
 }
 @media only screen and (max-width: 1000px) {
+	.bg__part_main {
+		&:before {
+			width: 100vw;
+		}
+		@for $i from 1 through 4 {
+			&:nth-child(#{$i}) {
+	    		right: 10% + ((3 - $i) * 40%);
+	    		&:before {
+	    			left: -25% - (($i - 2) * 100%);
+	    		}
+	    	}
+	    }
+	    &:nth-child(1) {
+	  		&:before {
+	  			left: 0;
+	  		}
+	  	}
+	    &:nth-child(4) {
+	  		right: 0;
+	  		&:before {
+	  			left: -900%;
+	  		}
+	  	}
+	}
 	.loaded {
-		.bg__part_main {
+		.bg__part{
 			width: 40%;
-			&:first-child {
-		  		width: 10%;
-		  	}
+		  	&:nth-child(1),
 		  	&:nth-child(4) {
 		  		width: 10%;
 			}
 		}
 	}
-}
-@media only screen and (max-width: 900px) {
 	.mainTxt {
 		margin-left: 10%;
 		margin-right: 10%;
 	}
-	.textWrap_head {
-		width: 100%;
-		max-width: 600px;
-	}
 }
 @media only screen and (max-width: 900px) and (orientation: landscape) {
-	.main {
-		height: 100vh;
-	}
 	.mainTxt {
 		height: calc(100% - (44px + 2em));
 		margin-top: calc(44px + 2em);
 	}
-	.mainMenu {
+}
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+	.textWrap_head {
 		margin-top: 2em;
 	}
 	.mainMenu__item {
 		&:not(:last-child) {
-			margin-bottom: 1.5em;
+			margin-bottom: 1em;
 		}
-	}
-}
-@media only screen and (max-width: 600px) and (orientation: landscape) {
-	.head {
-		font-size: 4em;
-	}
-}
-@media only screen and (max-width: 500px) and (orientation: landscape) {
-	.head {
-		padding-left: 0.3em;
 	}
 }
 @media only screen and (max-width: 420px) and (orientation: portrait) {
 	.mainTxt {
 		height: calc(100% - (44px + 2em));
 		margin-top: calc(44px + 2em);
-	}
-	.head {
-		font-size: 3.5em;
-		padding-left: 0.3em;
-	}
-}
-@media only screen and (max-width: 400px) and (orientation: portrait) {
-	.head {
-		font-size: 3em;
-	}
-}
-@media only screen and (max-width: 350px) and (orientation: portrait) {
-	.head {
-		font-size: 2.5em;
 	}
 }
