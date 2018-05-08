@@ -828,6 +828,8 @@ body {
     width: 40%; }
     .loaded .bg__part:nth-child(1), .loaded .bg__part:nth-child(4) {
       width: 10%; }
+  .serviceList {
+    margin-left: 2em; }
   .mainTxt {
     margin-left: 10%;
     margin-right: 10%; } }
@@ -835,9 +837,7 @@ body {
 @media only screen and (max-width: 900px) and (orientation: landscape) {
   .mainTxt {
     height: calc(100% - (44px + 2em));
-    margin-top: calc(44px + 2em); } }
-
-@media only screen and (max-width: 900px) and (orientation: landscape) {
+    margin-top: calc(44px + 2em); }
   .textWrap_head {
     margin-bottom: 2em; }
   .mainMenu__item:not(:last-child) {
@@ -847,6 +847,10 @@ body {
   .mainTxt {
     height: calc(100% - (44px + 2em));
     margin-top: calc(44px + 2em); } }
+
+@media only screen and (max-width: 350px) and (orientation: portrait) {
+  .mainMenu__item_active .mainMenu__link {
+    font-size: 1em; } }
 
 .mobMenu {
   display: none; }

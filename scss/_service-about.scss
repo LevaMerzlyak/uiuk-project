@@ -94,7 +94,8 @@
 		margin-left: 10%;
 		margin-right: 10%;
 	}
-	.service__txt {
+	.service__txt,
+	.serviceTxt__list {
 		margin-left: 0;
 		margin-right: 0;
 	}
@@ -109,5 +110,10 @@
 			margin-top: 2em;
 			margin-bottom: 2em;
 		}
+	}
+}
+@media only screen and (max-width: 350px) and (orientation: portrait) {
+	.service__txt_sup {
+		font-size: 2.5em;
 	}
 }

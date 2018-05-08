@@ -49,25 +49,22 @@
 .textWrap_head {
 	margin-bottom: 4em;
 }
+.mainMenu__wrap {
+	height: 50vh;
+	overflow: hidden;
+}
+.mainMenu {
+	width: 100%;
+	height: 100%;
+	padding-right: 20px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
 .mainMenu__item {
 	box-sizing: border-box;
 	position: relative;
 	&:not(:last-child) {
-		margin-bottom: 5%;
-	}
-	&:before {
-		content: "";
-		display: block;
-		width: 0.5em;
-		height: 0.5em;
-		border-radius: 50%;
-		border: 1px solid transparent;
-		background-color: transparent;
-		position: absolute;
-		left: -1px;
-		top: 50%;
-		transform: translate(-50%,-50%);
-		transition: all 1.5s ease-in-out 2s;
+		margin-bottom: 1em;
 	}
 }
 .mainMenu__link {
@@ -78,21 +75,25 @@
 	letter-spacing: 0.01em;
 	line-height: 1.3em;
 	text-decoration: none;
-	text-transform: uppercase;
-	display: block;	
-	padding-left: 2em;
+	display: block;
+	span {
+		font-weight: 700;
+	}
+	&:hover {
+		text-decoration: underline;
+	}
 }
-.serviceList {
-	margin-left: calc(100% / 3);
+.publicationsList {
+	margin-top: 1em;
 	height: 0;
 	transition: all 1.5s ease-in-out 2s;
 }
-.serviceList__item {
+.publicationsList__item {
 	position: relative;
 	opacity: 0;
 	transition: all 1.5s ease-in-out 2.5s;
 	&:not(:last-child) {
-		margin-bottom: 5%;
+		margin-bottom: 1em;
 	}
 	&:before {
 		content: "";
@@ -109,7 +110,7 @@
 		transition: all 1.5s ease-in-out 2s;
 	}
 }
-.serviceList__link {
+.publicationsList__link {
 	font-family: 'ProximaNova', sans-serif;
 	font-size: 1em;
 	font-weight: 300;
@@ -123,37 +124,8 @@
 		text-decoration: underline;
 	}
 }
-.serviceList__link_active {
+.publicationsList__link_active {
 	text-decoration: underline;
-}
-.mainMenu__item_active {
-	&:not(:last-child) {
-		margin-bottom: 7.5%;
-	}
-	&:last-child {
-		margin-top: 7.5%;
-	}
-	&:before {
-		content: "";
-		display: block;
-		width: 0.2em;
-		height: 100%;
-		border-radius: 0%;
-		background-color: transparent;
-		position: absolute;
-		left: 0;
-		top: 0;
-		transform: translate(0%,0%);
-		transition: all 1.5s ease-in-out 2s;
-	}
-	.mainMenu__link {
-		font-family: 'Bodoni', serif;
-		font-size: 2.1em;
-		font-weight: 700;
-		line-height: 1em;
-		margin-bottom: 1em;
-		padding-left: 1em;
-	}
 }
 .loaded {
 	.mainMenu__item {
@@ -161,16 +133,11 @@
 			border: 1px solid $wht;
 		}
 	}
-	.mainMenu__item_active {
-		&:before {
-			background-color: $wht;
-		}
-		.serviceList {
-			height: auto;
-		}
-		.serviceList__item {
-			opacity: 1;
-		}
+	.publicationsList {
+		height: auto;
+	}
+	.publicationsList__item {
+		opacity: 1;
 	}
 }
 @media only screen and (max-width: 1000px) {
@@ -207,7 +174,7 @@
 			}
 		}
 	}
-	.serviceList {
+	.publicationsList {
 		margin-left: 2em;
 	}
 	.mainTxt {
@@ -227,6 +194,11 @@
 		&:not(:last-child) {
 			margin-bottom: 1em;
 		}
+	}
+}
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+	.mainMenu__wrap {
+		height: 60vh;
 	}
 }
 @media only screen and (max-width: 420px) and (orientation: portrait) {
