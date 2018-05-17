@@ -1,7 +1,6 @@
 .bg__part_about {
 	width: 10.4%;
-	&:before {
-		background-image: url(../images/about_main.jpg);
+	.bg__inner {
 		width: 44.8vw;
 	}
 	&:first-child {

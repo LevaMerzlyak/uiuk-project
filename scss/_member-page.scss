@@ -6,7 +6,7 @@
 }
 .bg__part_main {
 	transition: width 1.5s ease-in-out 0s, transform 1.5s ease-in-out 0s;
-	&:before {
+	.bg__inner {
 		width: 44.8vw;
 	}
 }
@@ -22,8 +22,9 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: calc(100% - 10em);
+	height: calc(100% - 15em);
 	margin-top: 10em;
+	margin-bottom: 5em;
 	margin-left: 55.2%;
 	margin-right: 13.6%;
 }
@@ -39,8 +40,22 @@
 	letter-spacing: 0.01em;
 	line-height: 1.25em;
 }
-.textWrap_txt {
+.memberInfo__wrap {
+	overflow: hidden;
+	height: 60%;
+}
+.memberInfo {
+	height: 100%;
+	width: 100%;
+	padding-right: 20px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.textWrap_lang {
 	margin-bottom: 2em;
+}
+.textWrap_txt {
+	margin-bottom: 1em;
 }
 .main__txt {
 	font-family: 'ProximaNova', sans-serif;
@@ -54,9 +69,29 @@
 	font-weight: 700;
 	text-transform: uppercase;
 }
+.memberList {
+	margin-bottom: 2em;
+}
+.memberList__item {
+	position: relative;
+	padding-left: 2em;
+	&:not(:last-child) {
+		margin-bottom: 1em;
+	}
+	&:before {
+		content: "";
+		display: block;
+		width: 0.1em;
+		height: 0.1em;
+		border-radius: 50%;
+		border: 1px solid $wht;
+		background-color: $wht;
+		position: absolute;
+		left: 0;
+		top: 1em;
+	}
+}
 
-@media only screen and (max-width: 1250px) {}
-	
 @media only screen and (max-width: 1000px) {
 	.loaded {
 		.bg__part_main {
@@ -72,11 +107,17 @@
 }
 @media only screen and (max-width: 900px) and (orientation: portrait) {
 	.bg__part_main {
-		&:before {
+		height: 80vh;
+		.bg__inner {
 			width: 100vw;
 		}
 	}
+	.main {
+		height: auto;
+	}
 	.mainTxt {
+		height: auto;
+		margin-top: 85vh;
 		justify-content: flex-end;
 		margin-left: 10%;
 		margin-right: 10%;
@@ -90,7 +131,8 @@
 		position: fixed;
 	}
 	.bg__part_main {
-		&:before {
+		height: 100vh;
+		.bg__inner {
 			width: 50vw;
 		}
 		&:nth-child(3),
@@ -100,13 +142,21 @@
 	}
 	.mainTxt {
 		justify-content: flex-start;
-		margin-left: 50%;
+		margin-left: 10%;
 		margin-right: 10%;
 		margin-top: calc(44px + 2em);
 	}
 	.textWrap_position {
 		margin-top: 1em;
 		margin-bottom: 1em;
+	}
+	.textWrap_head,
+	.textWrap_position,
+	.textWrap_langHead,
+	.textWrap_lang,
+	.textWrap_info,
+	.textWrap_txt_first {
+		margin-left: 50%;
 	}
 	.textWrap_txt {
 		margin-bottom: 1em;
@@ -118,20 +168,8 @@
 	}
 }
 @media only screen and (max-width: 600px) and (orientation: landscape) {
-	.bg__part_main {
-		height: 100vh;
-	}
-	.mainTxt {
-		margin-left: 10%;
-	}
 	.head {
 		font-size: 3em;
-	}
-	.textWrap_head,
-	.textWrap_position,
-	.textWrap_lang,
-	.textWrap_info {
-		margin-left: 50%;
 	}
 	.textWrap_position {
 		margin-bottom: 2em;
@@ -152,15 +190,13 @@
 	.grid {
 		position: fixed;
 	}
-	.main {
-		height: auto;
-	}
 	.bg__part_main {
 		height: 65vh;
 	}
 	.mainTxt {
 		height: auto;
 		margin-top: 70vh;
+		margin-bottom: 0;
 	}
 }
 @media only screen and (max-width: 370px) and (orientation: portrait) {

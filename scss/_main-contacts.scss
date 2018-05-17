@@ -1,26 +1,25 @@
 .bg__part_contacts {
 	width: 10.4%;
-	&:before {
-		background-image: url(../images/contacts_main.jpg);
+	.bg__inner {
 		width: 55.2vw;
 	}
 	@for $i from 1 through 5 {
 		&:nth-child(#{$i}) {
     		right: 13.6% + ((4 - $i) * 10.4%);
-    		&:before {
+    		.bg__inner {
     			left: 0% - (($i - 1) * 100%);
     		}
     	}
   	}
   	&:nth-child(1) {
-  		&:before {
+  		.bg__inner {
   			left: 0;
   		}
   	}
   	&:nth-child(5) {
   		width: 13.6%;
   		right: 0;
-  		&:before {
+  		.bg__inner {
   			left: -306%;
   		}
   	}

@@ -12,15 +12,19 @@
 		transform: translateY(0%);
 	}
 }
-.logo {
-	display: inline-block;
+.logo__wrap {
 	margin-left: 13.6%;
 	width: 10.4%;
-	height: 6em;
+	height: 6em;	
+}
+.logo {
+	display: inline-block;
+	width: 75%;
+	height: 100%;
 	background-image: url(../images/logo.png);
 	background-repeat: no-repeat;
 	background-position: center left;
-	background-size: 75%;
+	background-size: contain;
 	text-indent: -9999px;
 }
 .menu {

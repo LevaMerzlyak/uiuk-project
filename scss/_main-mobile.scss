@@ -33,7 +33,7 @@
 	.bg__part_about,
 	.bg__part_contacts {
 		height: 50%;
-		&:before {
+		.bg__inner {
 			width: 100vw;
 		}
 	}
@@ -46,19 +46,19 @@
 		@for $i from 1 through 4 {
 			&:nth-child(#{$i}) {
 	    		right: 10% + ((3 - $i) * 40%);
-	    		&:before {
+	    		.bg__inner {
 	    			left: -25% - (($i - 2) * 100%);
 	    		}
 	    	}
 	    }
 	    &:nth-child(1) {
-  		&:before {
-  			left: 0;
-  		}
-  	}
+	  		.bg__inner {
+	  			left: 0;
+	  		}
+	  	}
 	    &:nth-child(4) {
 	  		right: 0;
-	  		&:before {
+	  		.bg__inner {
 	  			left: -900%;
 	  		}
 	  	}

@@ -150,15 +150,19 @@ body {
   -ms-transform: translateY(0%);
   transform: translateY(0%); }
 
-.logo {
-  display: inline-block;
+.logo__wrap {
   margin-left: 13.6%;
   width: 10.4%;
-  height: 6em;
+  height: 6em; }
+
+.logo {
+  display: inline-block;
+  width: 75%;
+  height: 100%;
   background-image: url(../images/logo.png);
   background-repeat: no-repeat;
   background-position: center left;
-  background-size: 75%;
+  background-size: contain;
   text-indent: -9999px; }
 
 .menu {
@@ -362,12 +366,13 @@ body {
     box-sizing: border-box;
     padding-left: 13.6%;
     padding-right: 13.6%; }
-  .logo {
+  .logo__wrap {
     width: calc(100% / 7);
     margin-left: 0;
     margin-top: 1em;
-    margin-bottom: 1em;
-    background-size: contain; }
+    margin-bottom: 1em; }
+  .logo {
+    width: 100%; }
   .menu,
   .lang {
     position: absolute;
@@ -454,11 +459,11 @@ body {
   .header {
     padding-left: 10%;
     padding-right: 10%; }
-  .logo {
+  .logo__wrap {
     width: 40%; } }
 
 @media only screen and (max-width: 900px) and (orientation: landscape) {
-  .logo {
+  .logo__wrap {
     height: 44px; }
   .menu__item {
     margin-top: 0;
@@ -467,7 +472,7 @@ body {
     font-size: 2.6em; } }
 
 @media only screen and (max-width: 420px) and (orientation: portrait) {
-  .logo {
+  .logo__wrap {
     height: 44px; } }
 
 @media only screen and (max-width: 350px) and (orientation: portrait) {

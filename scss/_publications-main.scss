@@ -6,25 +6,25 @@
 }
 .bg__part_main {
 	transition: width 1.5s ease-in-out 0s, transform 1.5s ease-in-out 0s;
-	&:before {
+	.bg__inner {
 		width: 44.8vw;
 	}
 	@for $i from 1 through 4 {
 		&:nth-child(#{$i}) {
     		right: 13.6% + ((3 - $i) * 10.4%);
-    		&:before {
+    		.bg__inner {
     			left: 0% - (($i - 1) * 100%);
     		}
     	}
   	}
   	&:nth-child(1) {
-  		&:before {
+  		.bg__inner {
   			left: 0;
   		}
   	}
   	&:nth-child(4) {
   		right: 0;
-  		&:before {
+  		.bg__inner {
   			left: -230%;
   		}
   	}
@@ -142,25 +142,25 @@
 }
 @media only screen and (max-width: 1000px) {
 	.bg__part_main {
-		&:before {
+		.bg__inner {
 			width: 100vw;
 		}
 		@for $i from 1 through 4 {
 			&:nth-child(#{$i}) {
 	    		right: 10% + ((3 - $i) * 40%);
-	    		&:before {
+	    		.bg__inner {
 	    			left: -25% - (($i - 2) * 100%);
 	    		}
 	    	}
 	    }
 	    &:nth-child(1) {
-	  		&:before {
+	  		.bg__inner {
 	  			left: 0;
 	  		}
 	  	}
 	    &:nth-child(4) {
 	  		right: 0;
-	  		&:before {
+	  		.bg__inner {
 	  			left: -900%;
 	  		}
 	  	}

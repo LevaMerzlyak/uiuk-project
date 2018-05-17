@@ -61,11 +61,6 @@ body {
 		transform: translate(-50%,-50%);
 	}
 }
-.bg__part_main {
-	&:before {
-		background-image: url(../images/about_page.jpg);
-	}
-}
 
 @import 'grid';
 @import 'header';

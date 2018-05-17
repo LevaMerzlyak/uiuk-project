@@ -79,12 +79,14 @@
 		padding-left: 13.6%;
 		padding-right: 13.6%;
 	}
-	.logo {
+	.logo__wrap {
 		width: calc(100% / 7);
 		margin-left: 0;
 		margin-top: 1em;
 		margin-bottom: 1em;
-		background-size: contain;
+	}
+	.logo {
+		width: 100%;
 	}
 	.menu,
 	.lang {
@@ -162,12 +164,12 @@
 		padding-left: 10%;
 		padding-right: 10%;
 	}
-	.logo {
+	.logo__wrap {
 		width: 40%;
 	}
 }
 @media only screen and (max-width: 900px) and (orientation: landscape) {
-	.logo {
+	.logo__wrap {
 		height: 44px;
 	}
 	.menu__item {
@@ -179,7 +181,7 @@
 	}
 }
 @media only screen and (max-width: 420px) and (orientation: portrait) {
-	.logo {
+	.logo__wrap {
 		height: 44px;
 	}
 }

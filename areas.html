@@ -29,7 +29,9 @@
 		<div class="grid__line"></div>
 	</div>
 	<header class="header" id="mobMenu">
-		<a href="index.html" class="logo">Logo</a>
+		<div class="logo__wrap">
+			<a href="index.html" class="logo">Ukriniurkoleguia</a>
+		</div>
 		<ul class="menu">
 			<li class="menu__item">
 				<a href="index.html" class="menu__link">Home</a>
@@ -61,11 +63,20 @@
 			</a>
 		</div>
 	</header>
-	<main class="main">
-		<div class="bg__part bg__part_main"></div>
-		<div class="bg__part bg__part_main"></div>
-		<div class="bg__part bg__part_main"></div>
-		<div class="bg__part bg__part_main"></div>
+	<main class="main" id="bg1">
+		<div class="bg__part bg__part_main">
+			<div class="bg__inner"></div>
+		</div>
+		<div class="bg__part bg__part_main">
+			<div class="bg__inner"></div>
+		</div>
+		<div class="bg__part bg__part_main">
+			<div class="bg__inner"></div>
+		</div>
+		<div class="bg__part bg__part_main">
+			<div class="bg__inner"></div>
+		</div>
+		<img class="bg__img" src="images/areas.jpg">
 		<div class="mainTxt">
 			<div class="textWrap textWrap_head">
 				<h1 class="head anim__txt">Practise Areas</h1>
@@ -225,6 +236,11 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 		<!-- Preloader -->
 	<script type="text/javascript" src="js/preloaderContacts.js"></script>
+		<!-- Backgrounds Init -->
+	<script type="text/javascript" src="js/bgInit.js"></script>
+	<script>
+		b1 = new BgInit('#bg1');
+	</script>
 		<!-- Mobile Menu -->
 	<script type="text/javascript" src="js/mobMenu.js"></script>
 	<script>
