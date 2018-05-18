@@ -121,9 +121,12 @@
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: $grey;
+	color: $gridGrey;
 	font-size: 1em;
 	font-family: 'GothamPro', sans-serif;
+	&:hover {
+		color: $wht;
+	}
 }
 .lang__link_active {
 	color: $wht;

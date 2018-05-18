@@ -83,6 +83,9 @@
 		text-decoration: underline;
 	}
 }
+.mainMenu__link_active {
+	text-decoration: underline;
+}
 .publicationsList {
 	margin-top: 1em;
 	height: 0;
@@ -123,6 +126,9 @@
 	&:hover {
 		text-decoration: underline;
 	}
+}
+.publicationsList__link_active {
+	text-decoration: underline;
 }
 .publicationsList__link_active {
 	text-decoration: underline;

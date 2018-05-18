@@ -66,7 +66,7 @@
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
-.publication__detaisBtn {
+.publication__detailsBtn {
 	font-family: 'ProximaNova', sans-serif;
 	font-size: 1em;
 	font-weight: 400;
@@ -82,7 +82,7 @@
 }
 .publication__head,
 .publication__txt,
-.publication__detaisBtn {
+.publication__detailsBtn {
 	margin-left: calc(100% / 7);
 	margin-right: calc(100% / 7);
 }
@@ -99,7 +99,7 @@
 		}
 	}
 	.publication__txt,
-	.publication__detaisBtn {
+	.publication__detailsBtn {
 		margin-left: 0;
 		margin-right: 0;
 	}

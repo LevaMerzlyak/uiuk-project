@@ -270,9 +270,11 @@ body {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  color: #6e6a67;
+  color: #b3b3b3;
   font-size: 1em;
   font-family: 'GothamPro', sans-serif; }
+  .lang__link:hover {
+    color: #fff; }
 
 .lang__link_active {
   color: #fff; }

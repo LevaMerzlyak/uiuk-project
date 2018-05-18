@@ -12,11 +12,11 @@ $(".loader__bg").animate({
 setTimeout(function(){
 
 	$('body').removeClass('loading').addClass('loaded');
-	$('.sliderPag__item').eq(0).addClass('sliderPag__item_active');
 
 	setTimeout(function(){
 
 		$('.slide').eq(0).addClass('slide_active');
+		$('.sliderPag__item').eq(0).addClass('sliderPag__item_active');
 
 		setTimeout(function(){
 
