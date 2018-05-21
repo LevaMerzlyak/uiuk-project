@@ -490,6 +490,10 @@ body {
   .menu__link {
     font-size: 2.6em; } }
 
+.loaded {
+  height: auto;
+  overflow: visible; }
+
 .contacts {
   width: calc(100% * 3 / 7);
   margin-right: calc(100% / 7); }

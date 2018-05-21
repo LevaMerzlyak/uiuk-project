@@ -24,7 +24,7 @@
 
 	@for $i from 1 through 9 {
 		&:nth-child(#{$i}) {
-    		right: 13.6% + ((8 - $i) * 10.4%);
+    		right: 13.6% + ((8 - $i) * 10.399%);
     		.bg__inner {
     			left: -30% - (($i - 1) * 100%);
     		}
