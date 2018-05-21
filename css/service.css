@@ -896,7 +896,7 @@ body {
     top: 0;
     height: 100%; }
   .service .grid__line:before {
-    background-color: #b3b3b3;
+    background-color: rgba(179, 179, 179, 0.3);
     height: 100%; }
   .service .loaded .grid__line:before {
     height: 100%; }
