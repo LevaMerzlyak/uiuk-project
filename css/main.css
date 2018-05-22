@@ -2092,54 +2092,56 @@ body {
     -webkit-transition-delay: 1.8s;
     -o-transition-delay: 1.8s;
     transition-delay: 1.8s; }
-  .page_current .areasList__item:nth-child(1):before {
-    -webkit-transition-delay: 2s;
-    -o-transition-delay: 2s;
-    transition-delay: 2s; }
-  .page_current .areasList__item:nth-child(1) .areasList__txt {
-    -webkit-transition-delay: 2s;
-    -o-transition-delay: 2s;
-    transition-delay: 2s; }
-  .page_current .areasList__item:nth-child(2):before {
-    -webkit-transition-delay: 2.2s;
-    -o-transition-delay: 2.2s;
-    transition-delay: 2.2s; }
-  .page_current .areasList__item:nth-child(2) .areasList__txt {
-    -webkit-transition-delay: 2.2s;
-    -o-transition-delay: 2.2s;
-    transition-delay: 2.2s; }
-  .page_current .areasList__item:nth-child(3):before {
-    -webkit-transition-delay: 2.4s;
-    -o-transition-delay: 2.4s;
-    transition-delay: 2.4s; }
-  .page_current .areasList__item:nth-child(3) .areasList__txt {
-    -webkit-transition-delay: 2.4s;
-    -o-transition-delay: 2.4s;
-    transition-delay: 2.4s; }
-  .page_current .areasList__item:nth-child(4):before {
-    -webkit-transition-delay: 2.6s;
-    -o-transition-delay: 2.6s;
-    transition-delay: 2.6s; }
-  .page_current .areasList__item:nth-child(4) .areasList__txt {
-    -webkit-transition-delay: 2.6s;
-    -o-transition-delay: 2.6s;
-    transition-delay: 2.6s; }
-  .page_current .areasList__item:nth-child(5):before {
-    -webkit-transition-delay: 2.8s;
-    -o-transition-delay: 2.8s;
-    transition-delay: 2.8s; }
-  .page_current .areasList__item:nth-child(5) .areasList__txt {
-    -webkit-transition-delay: 2.8s;
-    -o-transition-delay: 2.8s;
-    transition-delay: 2.8s; }
-  .page_current .areasList__item:nth-child(6):before {
-    -webkit-transition-delay: 3s;
-    -o-transition-delay: 3s;
-    transition-delay: 3s; }
-  .page_current .areasList__item:nth-child(6) .areasList__txt {
-    -webkit-transition-delay: 3s;
-    -o-transition-delay: 3s;
-    transition-delay: 3s; }
+  .page_current .areasList__item {
+    height: auto; }
+    .page_current .areasList__item:nth-child(1):before {
+      -webkit-transition-delay: 2s;
+      -o-transition-delay: 2s;
+      transition-delay: 2s; }
+    .page_current .areasList__item:nth-child(1) .areasList__txt {
+      -webkit-transition-delay: 2s;
+      -o-transition-delay: 2s;
+      transition-delay: 2s; }
+    .page_current .areasList__item:nth-child(2):before {
+      -webkit-transition-delay: 2.2s;
+      -o-transition-delay: 2.2s;
+      transition-delay: 2.2s; }
+    .page_current .areasList__item:nth-child(2) .areasList__txt {
+      -webkit-transition-delay: 2.2s;
+      -o-transition-delay: 2.2s;
+      transition-delay: 2.2s; }
+    .page_current .areasList__item:nth-child(3):before {
+      -webkit-transition-delay: 2.4s;
+      -o-transition-delay: 2.4s;
+      transition-delay: 2.4s; }
+    .page_current .areasList__item:nth-child(3) .areasList__txt {
+      -webkit-transition-delay: 2.4s;
+      -o-transition-delay: 2.4s;
+      transition-delay: 2.4s; }
+    .page_current .areasList__item:nth-child(4):before {
+      -webkit-transition-delay: 2.6s;
+      -o-transition-delay: 2.6s;
+      transition-delay: 2.6s; }
+    .page_current .areasList__item:nth-child(4) .areasList__txt {
+      -webkit-transition-delay: 2.6s;
+      -o-transition-delay: 2.6s;
+      transition-delay: 2.6s; }
+    .page_current .areasList__item:nth-child(5):before {
+      -webkit-transition-delay: 2.8s;
+      -o-transition-delay: 2.8s;
+      transition-delay: 2.8s; }
+    .page_current .areasList__item:nth-child(5) .areasList__txt {
+      -webkit-transition-delay: 2.8s;
+      -o-transition-delay: 2.8s;
+      transition-delay: 2.8s; }
+    .page_current .areasList__item:nth-child(6):before {
+      -webkit-transition-delay: 3s;
+      -o-transition-delay: 3s;
+      transition-delay: 3s; }
+    .page_current .areasList__item:nth-child(6) .areasList__txt {
+      -webkit-transition-delay: 3s;
+      -o-transition-delay: 3s;
+      transition-delay: 3s; }
   .areasTxt {
     width: 80%;
     margin-left: 10%;

@@ -131,6 +131,7 @@
 			}
 		}	
 		.areasList__item {
+			height: auto;
 			@for $i from 1 through 3 {
 				&:nth-child(#{$i}) {
 					&:before {
